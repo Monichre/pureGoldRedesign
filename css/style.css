@@ -333,6 +333,9 @@ main {
   .social img {
     width: 40px!important;
     height: 40px!important;
+    background-color: rgba(241,222,173, 0.7);
+    border-radius: 5px;
+    border: .5px solid gray;
 
   }
 
@@ -563,7 +566,6 @@ main {
     position: relative;
     margin-top: 100px;
     opacity: 0;
-
   }
   #profile {
     padding-left: 20px;
@@ -638,8 +640,6 @@ main {
     font-family: future;
     color: black;
   }
-
-
   /*Video styles*/
   #pager {
     height: 120px;
