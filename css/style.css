@@ -317,7 +317,7 @@ main {
     margin: auto;
     margin-top: 5px;
     text-align: center;
-    /*padding: 0;*/
+    padding: 0;
 
   }
   #desktop-nav ul a {
@@ -419,6 +419,7 @@ main {
   #collab {
     width: 100%;
     position: absolute;
+    text-align: left;
     top: 0;
     display: none;
     margin: auto;
@@ -428,12 +429,13 @@ main {
     display: block;
     margin: auto;
     margin-top: 4%;
-    text-align: center;
+
     width: max-content;
 }
   #hexagons {
     margin-top: 2%!important;
-    display: inline-block;
+    display: block;
+    float: left;
     margin: auto;
     width: 50%;
   }
@@ -555,15 +557,16 @@ main {
   /*profile styles -- on hover*/
 
   #profile, #about {
-    display: inline-block;
+    display: block;
     width: 25%;
+    float: left;
     position: relative;
-    bottom: 125px;
+    margin-top: 100px;
+    opacity: 0;
+
   }
   #profile {
     padding-left: 20px;
-    margin-left: 2%;
-    opacity: 0;
   }
   #profile img {
     height: 125px;
@@ -606,18 +609,10 @@ main {
   }
   #profile h2 {
     margin-top: 10px;
-
   }
   /**************************************************/
   /*#about*/
 
-  #about {
-    position: absolute;
-    right: 0;
-    top: 100px;
-    opacity: 0;
-    padding-right: 20px;
-  }
   #about h2 {
     padding:0;
   }
@@ -628,7 +623,6 @@ main {
     font-family: Andale Mono;
     color: gray;
     text-align: center;
-
   }
   /************************************************/
   /*FOOTER*/
