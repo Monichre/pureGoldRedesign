@@ -4,23 +4,16 @@ window.onload = function() {
 		$logo = $('#logo'),
 
 		$camera = $('#camera'),
-		$photo = $('.photo'),
 		$content = $('#landing'),
 		$collabLink =$('.collab'),
 		$collab = $('#collab'),
-		$menu = $('#menu'),
-		$x = $('#x'),
-		$mobileNav = $('#mobile-nav'),
-		$add = $('#add'),
-
+		$mobile = $('#mobile'),
 		$desktopNav = $('#desktop-nav'),
-
 		$mobileCamera = $('#mobile-camera'),
-		$mobileMasonry = $('#mobile-masonry'),
 		$container = $('#container'),
-		$mobileLogo = $('.mobile-logo'),
-		$mobileProfile = $('.mobileProfile'),
-		$mobileBlurb = $('#mobile-blurb p'),
+		$accordion = $('.accordion'),
+		$panel = $('.panel'),
+
 		$lexyImg = $('#lexy'),
 		$weddingImg = $('#wedding'),
 		$mazatlanImg = $('#mazatlan'),
@@ -37,30 +30,15 @@ window.onload = function() {
 		mqMobile = window.matchMedia('(max-width: 600px)'),
 		mqIpad = window.matchMedia('(min-width : 600px) and (max-width: 1200px)');
 
-		//functions:
+		//-->functions:
 		function videoDisplay(){
 			$container.show("slide", {direction: "right"}, 1000);
 		}
-		function mobileVideoDisplay(){
-			$grid = $('.grid').imagesLoaded( function() {
-			  // init Masonry after all images have loaded
-			  $grid.masonry({
-			    // options...
-					itemSelector: '.grid-item',
-					// use element for option
-					gutter: '.gutter-sizer',
-					columnWidth: '.grid-sizer',
-					percentPosition: true
-			  });
-			});
-			$mobileMasonry.slideDown(2000);
-		}
+
 		function contentRemove(){
 			$content.fadeOut(1000);
 			$collab.fadeOut(1000);
 			$container.fadeOut(1000);
-			// $mobileBlurb.fadeOut(500);
-			// $mobileProfile.fadeOut(500);
 		}
 		function videoTitleShow(elem, elem2){
 			elem.mouseenter(function(){
@@ -71,40 +49,24 @@ window.onload = function() {
 				elem2.remove();
 			});
 		}
-		function menuToggle(){
-			$menu.toggle(500);
-			$x.toggle(500);
-			$mobileNav.slideToggle(1000);
-		}
+
 	// Media Query Js //
 	if (mqMobile.matches) {
-		$('#mobileLogo').animate({
-			height:'-=100px',
-			width:'-=100px',
-		}, 5000);
-		$menu.click(function(){
-			menuToggle();
-		});
-		$x.click(function(){
-			menuToggle();
-		});
-		$mobileCamera.click(function(){
-			console.log('im in here wtf');
-			menuToggle();
+		console.log("im in mobile");
+		$collabLink.click(function(){
 			contentRemove();
-			setTimeout(function(){
-			mobileVideoDisplay();
-			}, 1000);
+			$mobile.fadeIn(1000);
 		});
-		$add.click(function(){
-			menuToggle();
-			contentRemove();
-			setTimeout(function(){
-				$mobileBlurb.fadeOut(500);
-				$mobileProfile.slideDown(2000);
-			}, 1000);
+		$accordion.click(function(){
+			console.log($(this).siblings('section'));
+			$(this).next($panel).slideToggle(500);
+			$(this).siblings('section').next('.panel').slideUp(500);
+
 		});
-	} else if(mqIpad.matches){
+
+
+		//some code will likely go here
+	} else if (mqIpad.matches){
 		$menu.click(function(){
 			menuToggle();
 		});
@@ -134,7 +96,40 @@ window.onload = function() {
 				$mobileProfile.slideDown(2000);
 			}, 1000);
 		});
-	} else if (mqMac.matches){ // --> macbook jquery
+	} else if (mqMac.matches){ // --> MACBOOK jquery
+		// -->CLICK FUNCTIONS -->
+		$camera.click(function(){
+			contentRemove();
+			setTimeout(function(){
+				videoDisplay();
+			}, 1000);
+		});
+		$collabLink.click(function(){
+			contentRemove();
+			setTimeout(function(){
+				$collab.fadeIn(2000);
+			}, 1000);
+		});
+		$('.media').click(function(){
+			contentRemove();
+			setTimeout(function(){
+				videoDisplay();
+			}, 1000);
+		});
+		$imgArray.forEach(function(img){
+			if(img.attr('id') === "lexy"){
+				videoTitleShow(img, $lexyTitle);
+			}
+			if(img.attr('id') === "mazatlan"){
+				videoTitleShow(img, $mazatlanTitle);
+			}
+			if(img.attr('id') === "reel"){
+				videoTitleShow(img, $reelTitle);
+			}
+			if(img.attr('id') === "wedding"){
+				videoTitleShow(img, $weddingTitle);
+			}
+		});
 		$('.arrow').hover(function(){
 			$('.arrow-blurb').fadeIn(1000);
 		}, function(){
@@ -190,7 +185,42 @@ window.onload = function() {
 				opacity: 0
 			}, 1000);
 		});
+
 	} else if(mqMonitor.matches) { // monitor
+		// -->CLICK FUNCTIONS -->
+		$camera.click(function(){
+			contentRemove();
+			setTimeout(function(){
+				videoDisplay();
+			}, 1000);
+		});
+		$collabLink.click(function(){
+			contentRemove();
+			setTimeout(function(){
+				$collab.fadeIn(2000);
+			}, 1000);
+		});
+		$('.media').click(function(){
+			contentRemove();
+			setTimeout(function(){
+				videoDisplay();
+			}, 1000);
+		});
+		$imgArray.forEach(function(img){
+			if(img.attr('id') === "lexy"){
+				videoTitleShow(img, $lexyTitle);
+			}
+			if(img.attr('id') === "mazatlan"){
+				videoTitleShow(img, $mazatlanTitle);
+			}
+			if(img.attr('id') === "reel"){
+				videoTitleShow(img, $reelTitle);
+			}
+			if(img.attr('id') === "wedding"){
+				videoTitleShow(img, $weddingTitle);
+			}
+		});
+		// -->HOVER FUNCTIONS -->
 		$('.arrow').hover(function(){
 			$('.arrow-blurb').fadeIn(1000);
 		}, function(){
@@ -249,36 +279,5 @@ window.onload = function() {
 
 	} else {
 	}
-	$camera.click(function(){
-		contentRemove();
-		setTimeout(function(){
-			videoDisplay();
-		}, 1500);
-	});
-	$collabLink.click(function(){
-		contentRemove();
-		setTimeout(function(){
-			$collab.fadeIn(2000);
-		}, 1000);
-	});
-	$('.media').click(function(){
-		contentRemove();
-		setTimeout(function(){
-			videoDisplay();
-		}, 1500);
-	});
-	$imgArray.forEach(function(img){
-		if(img.attr('id') === "lexy"){
-			videoTitleShow(img, $lexyTitle);
-		}
-		if(img.attr('id') === "mazatlan"){
-			videoTitleShow(img, $mazatlanTitle);
-		}
-		if(img.attr('id') === "reel"){
-			videoTitleShow(img, $reelTitle);
-		}
-		if(img.attr('id') === "wedding"){
-			videoTitleShow(img, $weddingTitle);
-		}
-	});
+
 }
