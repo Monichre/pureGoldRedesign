@@ -58,7 +58,10 @@ window.onload = function() {
 			console.log($(this).siblings('section'));
 			$(this).next($panel).slideToggle(500);
 			$(this).siblings('section').next('.panel').slideUp(500);
-
+		});
+		$('.media').click(function(){
+			$('.mobile-videos').slideToggle(500);
+			$('#mobile-videos').siblings('section').next('.panel').slideUp(500);
 		});
 	} else if (mqMac.matches){ // --> MACBOOK jquery
 		// -->CLICK FUNCTIONS -->
@@ -101,7 +104,6 @@ window.onload = function() {
 		}, function(){
 			$('.arrow-blurb').fadeOut(1000);
 		});
-
 		//review hover function
 		$('.reviews').hover(function(){
 			$('.review').fadeIn(1000);
