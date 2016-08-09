@@ -540,14 +540,11 @@ footer p {
   height: 100%;
   width: 100%;
 }
-/*************************************************************************************************************/
-  /*CONTACT STYLES*/
-
-
-
 
 /*************************************************************************************************************/
 /*MEDIA QUERIES*/
+
+/*Mobile*/
 
 @media only screen and (max-width: 800px){
   main {
@@ -581,13 +578,9 @@ footer p {
     margin: 0;
     position: relative;
     top:10px;
-
   }
   #mobile-profile {
     background-color: #c9bab0;
-  }
-  #mobile-videos {
-
   }
   #mobile-email {
     background-color: #b3b3b3;
@@ -602,20 +595,17 @@ footer p {
     font-size: 15px;
     padding: 1%;
   }
-
   .accordion img, section img {
     width: 50px;
     height: 50px;
   }
-  #camera {
+  #mobile-camera {
     width: 70px!important;
     height: 70px!important;
   }
   .panel {
     display: none;
-
   }
-
   #videos {
     margin: 10px;
     display: block;
@@ -632,27 +622,8 @@ footer p {
     height: 100%;
     width: 100%;
   }
-
-
 }
 
-/*IPAD media query*/
-/*@media only screen and (min-width: 600px){
-  #menu {display: block;}
-  #contact, #logo2, #collab, #mobile-masonry  {display: none!important;}
-  #mobile-nav{ display: none; position: absolute; top: 0; right: 0;}
-  #mobile-nav img { margin: auto; display: block!important; height: 40px; width: 40px;}
-  #mobile-nav ul { margin:auto; display: block; padding: 10px; }
-  #mobile-nav ul a { margin:auto; display: block!important;}
-  #menu, #x {position: absolute;top: 40px; right: 0; padding: 10px; z-index: 1000;}
-  #x {display: none; right: -8px;}
-  .center-li {text-align: center;}
-  #pager img {
-    width: 150px!important;
-  }
-
-
-}*/
 
 @media only screen and (min-width: 1130px){
   #mobile {
