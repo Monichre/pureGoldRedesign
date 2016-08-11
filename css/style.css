@@ -944,13 +944,16 @@ footer p {
   #mobile, #mobile-star {
     display: none;
   }
+  main {
+    margin-top: 50px;
+  }
   #about p {
     font-size: 15px;
   }
   .arrow-blurb {
     right: 60px;
     top: 100px;
-    width: 250px;
+    /*width: 250px;*/
   }
   .review1, .review3  {
     left: 0;
