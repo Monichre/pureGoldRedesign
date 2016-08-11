@@ -7,6 +7,13 @@ window.onload = function() {
 		$collabLink =$('.collab'),
 		$collab = $('#collab'),
 		$mobile = $('#mobile'),
+		//hover items //
+		$reviews = $('.review'),
+		$arrowBlurb = $('.arrow-blurb'),
+		$profile = $('#profile'),
+		$about = $('#about'),
+		$hoverItems = [$reviews, $arrowBlurb],
+
 		$desktopNav = $('#desktop-nav'),
 		$mobileCamera = $('#mobile-camera'),
 		$container = $('#container'),
@@ -25,7 +32,7 @@ window.onload = function() {
 		$imgArray = [$lexyImg, $mazatlanImg, $reelImg, $weddingImg],
 		$titleArray = [$lexyTitle, $mazatlanTitle, $reelTitle, $weddingTitle],
 		mqMobile = window.matchMedia('(max-width: 768px)'),
-		mqTablet = window.matchMedia('(min-width: 768px)'),
+		mqTablet = window.matchMedia('(min-width: 768px) and (max-width: 1130px)'),
 		mqMac = window.matchMedia('(min-width: 1130px)');
 
 		//-->functions:
@@ -37,6 +44,18 @@ window.onload = function() {
 			$content.fadeOut(1000);
 			$collab.fadeOut(1000);
 			$container.fadeOut(1000);
+		}
+		function hoverItemEffects(){
+			$hoverItems.forEach(function(elem){
+				elem.fadeOut(500);
+			});
+			$profile.animate({
+				opacity: 0
+			}, 1000);
+			$about.animate({
+				opacity: 0
+			}, 1000);
+
 		}
 		function videoTitleShow(elem, elem2){
 			elem.mouseenter(function(){
@@ -66,7 +85,6 @@ window.onload = function() {
 		});
 	} else if (mqTablet.matches){
 		$camera.click(function(){
-			console.log('im fucking clicking');
 			contentRemove();
 			setTimeout(function(){
 				videoDisplay();
@@ -98,14 +116,14 @@ window.onload = function() {
 				videoTitleShow(img, $weddingTitle);
 			}
 		});
-		$('.arrow').hover(function(){
+		$('.arrow').click(function(){
+			hoverItemEffects();
 			$('.arrow-blurb').fadeIn(1000);
-		}, function(){
-			$('.arrow-blurb').fadeOut(1000);
 		});
 		//review hover function
-		$('.reviews').hover(function(){
-			$('.review').fadeIn(1000);
+		$('.reviews').click(function(){
+			hoverItemEffects();
+			$reviews.fadeIn(1000);
 			$('.review1').animate({
 				left: '60px'
 			}, 2000);
@@ -118,31 +136,21 @@ window.onload = function() {
 			$('.review4').animate({
 				right: '60px'
 			}, 2000);
-		}, function(){
-			$('.review').fadeOut(1000);
 		});
-	
+
 		//profile hover function
-		$('.profile').hover(function(){
-			$('#profile').animate({
+		$('.profile').click(function(){
+			hoverItemEffects();
+			$profile.animate({
 				opacity: 1
 			}, 1000);
-		}, function(){
-			$('#profile').animate({
-				opacity: 0
-			}, 1000);
 		});
-		$('.about').hover(function(){
-			$('#about').animate({
+		$('.about').click(function(){
+			hoverItemEffects();
+			$about.animate({
 				opacity: 1
 			}, 1000);
-		}, function(){
-			$('#about').animate({
-				opacity: 0
-			}, 1000);
 		});
-
-
 	} else if (mqMac.matches){ // --> MACBOOK jquery
 		// -->CLICK FUNCTIONS -->
 		console.log('im in macbook');
