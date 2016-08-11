@@ -912,6 +912,20 @@ footer p {
   #mobile, #mobile-star {
     display: none;
   }
+  #about p {
+    font-size: 15px;
+  }
+  .arrow-blurb {
+    right: 60px;
+    top: 100px;
+    width: 250px;
+  }
+  .review1, .review3  {
+    left: 0;
+  }
+  .review2, .review4  {
+    right: 0;
+  }
 
 
 }
