@@ -710,7 +710,7 @@ footer p {
     right: 5px;
   }
   #about p {
-    font-size: 10px;
+    font-size: 11px;
     padding-left: 10px;
   }
   #profile {
@@ -722,7 +722,7 @@ footer p {
   }
   #about {
     margin-top: 30px;
-    padding: 3%;
+    padding: 2%;
   }
   .arrow-blurb {
     right: 10px;
@@ -828,9 +828,18 @@ footer p {
     margin-top: 50px;
   }
   .arrow-blurb {
-    right: 60px;
-    top: 100px;
+    right: 20px;
+    top: 60px;
     width: 250px;
+  }
+  .star3 {
+    top: 30px;
+  }
+  .review {
+    width: 200px;
+  }
+  .review4 {
+    bottom: 20px;
   }
 
 }
@@ -914,11 +923,19 @@ footer p {
     margin-top: 50px;
   }
   .arrow-blurb {
-    right: 60px;
-    top: 100px;
+    right: 20px;
+    top: 60px;
     width: 250px;
   }
-
+  .star3 {
+    top: 30px;
+  }
+  .review {
+    width: 200px;
+  }
+  .review4 {
+    bottom: 20px;
+  }
 
 }
 
