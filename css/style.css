@@ -705,9 +705,15 @@ footer p {
     height: 50px;
   }
   #about h2 {
-    font-size: 15px;
+    font-size: 13px;
+    position: relative;
+    right: 5px;
   }
-  #about p, #profile {
+  #about p {
+    font-size: 10px;
+    padding-left: 10px;
+  }
+  #profile {
     font-size: 12px;
   }
   #profile {
@@ -716,7 +722,7 @@ footer p {
   }
   #about {
     margin-top: 30px;
-    padding: 2%;
+    padding: 3%;
   }
   .arrow-blurb {
     right: 10px;
@@ -731,6 +737,15 @@ footer p {
   }
   .review2, .review4  {
     right: 0;
+  }
+  .review4 {
+    bottom: 10px;
+  }
+  .pure-gold-title {
+
+  }
+  .star3 {
+    top: 30px;
   }
 
 }
