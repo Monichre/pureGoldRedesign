@@ -148,9 +148,32 @@
 					<img src="images/gear2.png" alt="" class="portfolio-image"/>
 				</div>
 				<header>
-					<h2>PORTFOLIO</h2>
+					<h2>
+						<span class="award" value="">
+							<svg>
+								<use xlink:href="#wreath-leaf"/></svg>
+								 <span>Pure Gold</span>
+								<svg style="transform: scaleX(-1);"><use xlink:href="#wreath-leaf" />
+							</svg>
+						</span>
+
+						<svg><defs>
+							<symbol id="wreath-leaf" viewbox="0 0 65 125"  >
+								<path d="M66.4 126l2.1-4C13.5 102 6.3 49 55 6.7-5.4 55 18.4 106 66.4 126zM59 17c-7-4-18 1-20 5 6 2 15-1 20-5zm-8 9c-6-4-15 1-19 6 6 1 13-2 19-6zM27 41c8 2 14-1 19-7-8-3-14 2-19 7zm14 2c-8-3-14 3-18 9 2 4 14-3 18-9zm-3 9c-9-1-15 7-17 11 2 4 13-4 17-11zM21 75c9-1 13-5 16-13-9 0-12 6-16 13zm19.4-4.1c-10 0-17 10.6-15 13.6 1 2 13-4.6 15-13.6zm.6 8.9c-7 1-11.8 7.2-12.8 12.2 3 1 12-4.3 12.8-12.2zm-7.3 19.9c6 0 11.4-6.9 11.4-13.9-7 2-11.4 10.2-11.4 13.9zM43 108c6 0 10.2-15 5.2-17-4 3-7.2 17-5.2 17zm8 10c9.8-9 8.1-20 3-20-5 10-5 10-3 20zm-23.1 2c2.9 9 19.8 5 21.9-4-7-3-14.5 5-21.9 4zm-8.6-3c5 0 18.7 1 21.7-9-4 0-20.7-1-21.7 9zm14.5-15c-11.7-7.9-19-2-23.2-2 5.2 10 17.2 3 23.2 2zm-7.2-9.5c-5-4-15.5-11.4-22.29-4.4 4.78 4 17.29 10.5 22.29 4.4zM2.6 74C7 79 20 87 22 83c-1-4-12-14-19.4-9zm1.9-15C7.3 67 16 74 19 71c0-4-4-14-14.5-12zm5-15C8.1 55 18 58 21 57c0-3-2-12-11.5-13zM16 32c0 6 3 16 8 16 0-5 1-15-8-16zm8-13c-2 7-1 18 4 19 2-6 4-16-4-19zM36 8c-4 7-3 13-1 19 2-4 6-12 1-19zm10-9.12C41 4.9 39 10 42 18c2-3 8-12.8 4-19.12zM49 12c7 0 15-2 17-10.1-8-.1-13 .9-17 10.1z" />
+								</symbol>
+						 </svg>
+					 </h2>
 				</header>
+
+					<h1 class="examples-header">Portfolio</h1>
 					<h2 class="examples-header">Check out some examples of our latest projects</h2>
+					<hr>
+					<ul>
+						<a class="facebook" href="https://www.facebook.com/Jud-Nichols-670035399807451/?fref=ts"><i class="fa fa-lg fa-facebook"></i></a>
+						<a class="vimeo" href="https://www.vimeo.com/judnichols"><i class="fa fa-lg fa-vimeo"></i></a>
+						<a class="instragram" href="https://www.instagram.com/judnichols"><i class="fa fa-lg fa-instagram"></i></a>
+						<a class="linked-in" href="https://www.linkedin.com/in/jud-nichols-268b405b?authType=NAME_SEARCH&authToken=WAH3&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A214825328%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1471377920867%2Ctas%3Ajud"><i class="fa fa-lg fa-linkedin"></i></a>
+					</ul>
 
 			</section>
 			<section id="videos" class="">
@@ -199,31 +222,12 @@
 			</section>
 		</div>
 		<footer id="contact" class="animated">
-			<!-- <h3>Contact</h3>
-			<main>
-				<form class="" action="index.html" method="post">
-					<div class="form-group">
-					 <label for="name">Name</label>
-					 <input type="text" class="form-control" id="name">
-				 </div>
-				 <div class="form-group">
-					 <label for="email">Email</label>
-					 <input type="text" class="form-control" id="email">
-				 </div>
-				 <div class="form-group">
-					 <label for="note">Write a Note</label><br>
-					 <br>
-					 <textarea type="text" class="form-control" id="note"></textarea>
-				 </div>
-				 <button type="submit" name="send">Send</button>
-				</form>
-			</main> -->
 			<form>
 			  <input id="input-1" type="text" placeholder="John Doe" required autofocus />
 			  <label for="input-1">
 			    <span class="label-text">Full Name</span>
 			    <span class="nav-dot"></span>
-			    <div class="signup-button-trigger">Sign Up</div>
+			    <div class="signup-button-trigger">CONTACT</div>
 			  </label>
 			  <input id="input-2" type="text" placeholder="john" required />
 			  <label for="input-2">
@@ -235,19 +239,10 @@
 			    <span class="label-text">Email</span>
 			    <span class="nav-dot"></span>
 			  </label>
-			  <input id="input-4" type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required />
-			  <label for="input-4">
-			    <span class="label-text">Password</span>
-			    <span class="nav-dot"></span>
-			  </label>
-			  <input id="input-5" type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required />
-			  <label for="input-5">
-			    <span class="label-text">Confirm Password</span>
-			    <span class="nav-dot"></span>
-			  </label>
-			  <button type="submit">Create Your Account</button>
+
+			  <button type="submit">Send</button>
 			  <p class="tip">Press Tab</p>
-			  <div class="signup-button">Sign Up</div>
+			  <div class="signup-button">CONTACT</div>
 			</form>
 
 

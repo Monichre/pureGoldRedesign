@@ -1344,6 +1344,7 @@
 		width: 100%!important;
 		display: block;
 		padding: 0!important;
+		margin: 0!important;
 		height: 200px;
 		background-image: url("../images/gear2.jpeg");
 		background-attachment: fixed;
@@ -1576,36 +1577,84 @@
 
 	#header {
 		width: 40%;
-		padding-left: 2em;
+		/*padding-left: 2em;*/
+		border-radius: 5px;
 		position: relative;
+		background-color: #202020;
+		margin: 0 0 10em 3em;
 	}
-		.portfolio-image img {
-			width: 100%;
-			padding: 0 2em 2em 2em;
-		}
+	#header .image.fit:before {
+		border-bottom: 5px solid #b00000;
+	}
 		#header header {
 			position: absolute;
 			width: 100%;
 			top: 0;
 			left: 0;
 		}
+			#header header h2 .award {
+				margin: 0;
+			}
 			#header header h2 {
+				margin-top: 150px;
+				text-align: center;
+				display: block;
 				font-family: 'Open Sans', sans-serif;
 				font-weight: 900;
-				font-size: 4em;
+				font-size: 2em;
 				letter-spacing: 2px;
 				color: white;
 				text-shadow: 1px 1px 1px gray;
 			}
 			.examples-header {
-				font-family: 'Open Sans', sans-serif;
-				font-weight: 900;
-				font-size: 3em;
-				letter-spacing: 1px;
-				color: black;
+				font-family: 'Lato', sans-serif;
+				font-weight: 300;
 				font-style: italic;
+				font-size: 2em;
+				letter-spacing: 1px;
+				color: white;
+				font-style: italic;
+				padding: 10px;
+			}
+			h1.examples-header {
+				font-family: 'Open Sans', sans-serif;
+				margin-top: 100px;
+				font-weight: bold;
+				font-size: 3em;
+				font-style: normal;
+				text-transform: uppercase;
+			}
+			#header hr {
+				margin-top: 40px;
+				width: 50%;
+				padding: 0;
+				 border: none;
+				 border-top: medium double #b00000;
+				 text-align: center;
+			}
+			#header hr:before { /* Not really supposed to work, but does */
+				content: "§";
+				 display: inline-block;
+				 position: relative;
+				 top: -0.7em;
+				 font-size: 1.5em;
+				 padding: 0 0.25em;
+				 color: white;
 
 			}
+			#header ul {
+				display: block;
+				margin-top: 100px;
+				width: 100%;
+				color: white;
+				text-align: center;
+			}
+			#header ul a {
+				margin: 10px;
+			}
+				#header i {
+					font-size: 2em;
+				}
 
 	#videos {
 		padding: 0 4em 4em 2em;

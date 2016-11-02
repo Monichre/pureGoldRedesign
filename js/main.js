@@ -9,12 +9,19 @@
 			windowScrollTop = $window.scrollTop(),
 			$introHeight = $('#intro').height(),
 			$portfolioHeight = $('#portfolio').height();
+			$gearHeight = $('#gear').height();
+
 
 		if (windowScrollTop > $introHeight/2) {
 
 			$('.gear section:nth-child(1)').addClass('slideInLeft').show();
 			$('.gear section:nth-child(2)').addClass('slideInRight').show();
 		}
+		if (windowScrollTop > ($gearHeight + $portfolioHeight + $introHeight)) {
+
+			$('#contact form').addClass('slideInDown').show();
+		}
+
 
 	});
 
