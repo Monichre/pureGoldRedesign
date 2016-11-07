@@ -20,9 +20,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 		<link rel="stylesheet" href="css/portfolio.css">
-		<link rel="stylesheet" href="css/bigvideo.css">
 		<link rel="stylesheet" href="css/style.css">
-		<link rel="icon" href="images/chunk.png">
+
 	</head>
 	<body>
 		<section id="intro" class="section section_1">
@@ -45,12 +44,11 @@
 					<video src= "https://player.vimeo.com/external/189743869.hd.mp4?s=c434479279f40ccb7eb55adcb1ed0d4a096f3bfe&profile_id=119" poster="https://i.vimeocdn.com/video/600178728.webp?mw=960&mh=540" id="videoBackground" class="" muted loop autoplay ></video>
 			</section>
 			<main id="landing">
-				<div class="hex">
-					<div class="links">
-						<p class="link collab"><a href="#info">About</a></p>
-						<hr>
-						<p class="link portfolio"><a href="#portfolio">Portfolio</a></p>
-					</div>
+				<div class="links">
+					<p class="link collab"><a id="info-link" value="info" onclick="return false;" href="#info">About</a></p>
+					<p class="link">/ /</p>
+
+					<p class="link portfolio"><a id="portfolio-link" value="portfolio" onclick="return false;" href="#portfolio">Portfolio</a></p>
 				</div>
 			</main>
 		</section>
@@ -86,8 +84,9 @@
 			  <span class="award" value="reviews">
 			    <svg>
 						<use xlink:href="#wreath-leaf"/></svg>
-						 <span>Reviews</span>
-						<svg style="transform: scaleX(-1);"><use xlink:href="#wreath-leaf" />
+							 <span>Reviews</span>
+							<svg style="transform: scaleX(-1);">
+						<use xlink:href="#wreath-leaf" />
 					</svg>
 				</span>
 
@@ -105,7 +104,7 @@
 								<span>J</span>ud Nichols, Founder of Pure Gold, is a video producer and lawyer who found his passion for cameras while stranded on a deserted island filming a reality
 								TV show called <a href="http://www.nbc.com/the-island?nbc=1">The Island</a>.
 							</p>
-							<hr>
+							<!-- <hr> -->
 							<p>
 								<span>J</span>ud's interests are both technical and creative. Combining his artistic eye with his fluency in video editing,
 								he's filmed a variety of content from documentaries in Nebraska to twerking parties on rooftops of Minneapolis. He will travel any distance
@@ -189,7 +188,7 @@
 						<p>Aerial photography demo</p>
 					</article>
 					<article class="6u 12u$(xsmall) work-item">
-						<a href="https://vimeo.com/167766803" class="image fit thumb"><img src="https://i.vimeocdn.com/video/564629865.webp?mw=960&mh=540" alt="" title="A composite of our work shot in 2016" /></a>
+						<a href="https://vimeo.com/167766803" class="image fit thumb"><img src="https://i.vimeocdn.com/video/600178338.webp?mw=960&mh=540" alt="" title="A composite of our work shot in 2016" /></a>
 						<h2>The Reel</h2>
 						<p>A composite of our work shot in 2016</p>
 					</article>
@@ -222,19 +221,19 @@
 			</section>
 		</div>
 		<footer id="contact" class="animated">
-			<form>
-			  <input id="input-1" type="text" placeholder="John Doe" required autofocus />
+			<form action="https://formspree.io/jud.nichols@gmail.com" method="POST">
+			  <input id="input-1" type="text" name="firstName" placeholder="John" required autofocus />
 			  <label for="input-1">
-			    <span class="label-text">Full Name</span>
+			    <span class="label-text">First Name</span>
 			    <span class="nav-dot"></span>
 			    <div class="signup-button-trigger">CONTACT</div>
 			  </label>
-			  <input id="input-2" type="text" placeholder="john" required />
+			  <input id="input-2" type="text" name="lastName" placeholder="Doe" required />
 			  <label for="input-2">
-			    <span class="label-text">Username</span>
+			    <span class="label-text">Last Name</span>
 			    <span class="nav-dot"></span>
 			  </label>
-			  <input id="input-3" type="email" placeholder="email@address.com" required />
+			  <input id="input-3" type="email" name="email" placeholder="email@address.com" required />
 			  <label for="input-3">
 			    <span class="label-text">Email</span>
 			    <span class="nav-dot"></span>
@@ -244,8 +243,6 @@
 			  <p class="tip">Press Tab</p>
 			  <div class="signup-button">CONTACT</div>
 			</form>
-
-
 		</footer>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
