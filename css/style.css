@@ -650,6 +650,10 @@ form {
 }
 
 @media screen and (max-width: 736px) {
+  #portfolio, .gear, #header {
+    background-size: auto;
+  }
+
 
   .title {
     font-size: 1.75em!important;
@@ -675,7 +679,6 @@ form {
 }
 
 @media screen and (max-width: 480px) {
-  /*tricks*/
 
   .title {
     font-size: 1.75em!important;

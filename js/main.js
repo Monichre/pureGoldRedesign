@@ -1,8 +1,10 @@
 (function($) {
 
+
 	$(window).scroll(function(){
 		var
 			$window = $(window),
+			windowHeight = $window.height(),
 			windowScrollTop = $window.scrollTop(),
 			$introHeight = $('#intro').height(),
 			$portfolioHeight = $('#portfolio').height();
