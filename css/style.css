@@ -646,14 +646,9 @@ form {
     position: relative;
     bottom: 20px;
   }
-
 }
 
 @media screen and (max-width: 736px) {
-  #portfolio, .gear, #header {
-    background-size: auto;
-  }
-
 
   .title {
     font-size: 1.75em!important;
@@ -679,6 +674,18 @@ form {
 }
 
 @media screen and (max-width: 480px) {
+  #portfolio, .gear, #header {
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+
+
+
 
   .title {
     font-size: 1.75em!important;
@@ -706,13 +713,11 @@ form {
   }
 
 
+
   .gear section {
     width: 100%!important;
     float: none!important;
     text-align: center!important;
-  }
-  .gear section h2 {
-
   }
   .gear section:nth-of-type(1) h2 {
     padding-top: 50px;
