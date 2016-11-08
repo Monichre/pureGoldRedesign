@@ -1936,11 +1936,7 @@
 
 	#header {
 		height: 250px;
-    background-position: left center;
-    -webkit-background-size: cover!important;
-    -moz-background-size: cover!important;
-    -o-background-size: cover!important;
-    background-size: cover!important;
+  	background-image: url("../images/mobile/gear2.png");
   }
 		#videos {
 			padding: 2.25em 1.5em 0.25em 1.5em;

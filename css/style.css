@@ -674,12 +674,11 @@ form {
 }
 
 @media screen and (max-width: 480px) {
-  #info, .gear {
-    background-position: left center;
-    -webkit-background-size: cover!important;
-    -moz-background-size: cover!important;
-    -o-background-size: cover!important;
-    background-size: cover!important;
+  .gear {
+    background-image: url("../images/mobile/gear.png");
+  }
+  #info {
+    background-image: url("../images/mobile/cameras.png");
   }
 
   .title {
