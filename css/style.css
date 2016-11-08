@@ -674,18 +674,14 @@ form {
 }
 
 @media screen and (max-width: 480px) {
-  #portfolio, .gear, #header {
+  #info, .gear {
     background-attachment: fixed;
     background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: 100% 100%!important;
+    -moz-background-size: 100% 100%!important;
+    -o-background-size: 100% 100%!important;
+    background-size: 100% 100%!important;
   }
-
-
-
-
 
   .title {
     font-size: 1.75em!important;
