@@ -1937,11 +1937,11 @@
 	#header {
 		height: 250px;
     background-attachment: fixed;
-    background-position: center center;
-    -webkit-background-size: 100%!important;
-    -moz-background-size: 100%!important;
-    -o-background-size: 100%!important;
-    background-size: 100%!important;
+    background-position: center;
+    -webkit-background-size: contain!important;
+    -moz-background-size: contain!important;
+    -o-background-size: contain!important;
+    background-size: contain!important;
   }
 		#videos {
 			padding: 2.25em 1.5em 0.25em 1.5em;
