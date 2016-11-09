@@ -9,8 +9,6 @@
 			$introHeight = $('#intro').height(),
 			$portfolioHeight = $('#portfolio').height();
 			$gearHeight = $('#gear').height();
-
-
 		if (windowScrollTop > $introHeight/2) {
 			$('.gear section:nth-child(1)').addClass('slideInLeft').show();
 			$('.gear section:nth-child(2)').addClass('slideInRight').show();
@@ -22,9 +20,7 @@
 	});
 
 	$(function() {
-
 		// Smooth Scroll
-
 		$('a[href*="#"]:not([href="#"])').click(function() {
 	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 	      var target = $(this.hash);
@@ -101,6 +97,19 @@
 			usePopupEasyClose: false,
 			usePopupNav: true
 		});
+		var mq = window.matchMedia( "(max-width: 480px)" );
+		var video = document.getElementById('videoBackground');
+
+		if (mq.matches) {
+			$(window).click(function(){
+				video.play();
+			});
+		} else {
+			$(window).on('load', function(){
+				video.play();
+			});
+		}
+
 	});
 
 })(jQuery);

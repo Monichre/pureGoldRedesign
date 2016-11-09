@@ -1935,11 +1935,19 @@
 @media screen and (max-width: 480px) {
 
 	#header {
-		height: 250px;
+		/*height: 250px;*/
   	background-image: url("../images/mobile/gear2.png");
+		/*background-color: white;*/
+		background-attachment: local;
+		background-position: top center!important;
+		background-size: 100%!important;
+		position: relative;
+		width: 100%;
   }
+
+
 		#videos {
-			padding: 2.25em 1.5em 0.25em 1.5em;
+			padding: 0 1.5em 0.25em 1.5em!important;
 		}
 		#header svg {
 			width: 2em;
