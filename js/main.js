@@ -105,9 +105,9 @@
 				video.play();
 			});
 		} else {
-			$(window).on('load', function(){
+
 				video.play();
-			});
+			
 		}
 
 	});
