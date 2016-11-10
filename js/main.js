@@ -103,8 +103,8 @@
 		if (isIOS) {
 
 			var canvasVideo = new CanvasVideoPlayer({
-				videoSelector: '.video',
-				canvasSelector: '.canvas',
+				videoSelector: '#videoBackground',
+				canvasSelector: '#canvas',
 				timelineSelector: false,
 				autoplay: true,
 				makeLoop: true,
@@ -115,7 +115,7 @@
 		}else {
 
 			// Use HTML5 video
-			document.querySelectorAll('.canvas')[0].style.display = 'none';
+			document.querySelectorAll('#canvas')[0].style.display = 'none';
 
 		}
 
